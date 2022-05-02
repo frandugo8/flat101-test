@@ -1,0 +1,68 @@
+
+.mobileNavButton {
+  width: 50px;
+  height: 50px;
+  display: none;
+  color: white;
+  border: none;
+  padding: 0 60px 0 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  z-index: 1000;
+  position: fixed;
+  top: .4rem;
+  right: .4rem;
+
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-width: 50px;
+    height: 50px;
+
+    &___isActive {
+      transform: rotate(45deg);
+    }
+  }
+
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:white;
+    stroke-width: .4vw;
+    stroke-linecap: round;
+
+    &___top {
+      stroke-dasharray: 40 139;
+    }
+
+    &___bottom {
+      stroke-dasharray: 40 180;
+    }
+
+    &___topActive {
+      stroke-dashoffset: -98px;
+    }
+
+    &___bottomActive {
+      stroke-dashoffset: -138px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .mobileNavButton {
+    display: flex;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobileNavButton {
+    position: absolute;
+  }
+}

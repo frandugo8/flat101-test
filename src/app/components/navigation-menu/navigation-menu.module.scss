@@ -1,0 +1,18 @@
+
+@import "../../shared/styles/settings/colors";
+
+.navigation {
+  height: 100%;
+  width: 15rem;
+  min-width: 14rem;
+  padding: 1rem .4rem .4rem .4rem;
+  box-sizing: border-box;
+  border-right: .1rem solid $grey;
+  background-color: $black;
+}
+
+@media (max-width: 640px) {
+  .navigation {
+    display: none;
+  }
+}

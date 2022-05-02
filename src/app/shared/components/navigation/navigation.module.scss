@@ -1,0 +1,36 @@
+
+@import "../../../shared/styles/settings/colors";
+
+.navigation {
+  .option {
+    padding: .6rem .8rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: .4rem 0;
+    border-radius: .2rem;
+    transition: .1s linear background-color, .1s linear color;
+    color: $text;
+
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
+
+    &___selected {
+      background-color: $blue;
+      color: white;
+    }
+
+    &__icon {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: .6rem;
+      filter: invert(1);
+    }
+
+    &__label {
+      font-weight: bold;
+    }
+  }
+}

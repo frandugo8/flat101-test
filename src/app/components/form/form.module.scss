@@ -1,0 +1,134 @@
+
+@import "../../shared/styles/settings/colors";
+
+.wrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $black;
+
+  .content {
+    height: 100%;
+    width: 100%;
+    padding: .4rem 2rem;
+    position: absolute;
+    box-sizing: border-box;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 30rem;
+      padding-bottom: 1rem;
+  
+      &__error {
+        color: black;
+        background-color: $red;
+        padding: 1rem .8rem;
+        border-radius: .4rem;
+        font-size: 14px;
+        margin-bottom: 1.8rem;
+      }
+  
+      .option {
+        line-height: 16px;
+        width: 100%;
+  
+        .input {
+          background-color: rgb(45, 44, 44);
+          height: 3rem;
+          border-radius: .4rem;
+          display: flex;
+          align-items: center;
+          padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+          box-sizing: border-box;
+          position: relative;
+          transition: linear 0.1s background-color;
+          outline: none;
+          border: none;
+          color: white;
+          font-size: 18px;
+          margin-bottom: .4rem;
+          width: 100%;
+      
+          &::placeholder {
+            color: $text;
+          }
+      
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+  
+      .textarea {
+        resize: none;
+        height: 12rem;
+        background-color: rgb(45, 44, 44);
+        border: none;
+        border-radius: .4rem;
+        color: white;
+        font-size: 18px;
+        padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+        box-sizing: border-box;
+        width: 100%;
+  
+        &:focus {
+          outline: none;
+        }
+      }
+    
+      .submit {
+        padding: .8rem 1.2rem;
+        background-color: $blue;
+        box-sizing: border-box;
+        width: fit-content;
+        border-radius: .4rem;
+        margin-top: 1rem;
+        color: white;
+        transition: .1s linear background-color;
+  
+        &:hover {
+          background-color: rgb(19, 65, 117);
+        }
+      }
+    }
+  }
+}
+
+.label {
+  color: $text_highlighted;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: .4rem 0;
+
+  &__required {
+    font-size: 14px;
+    color: $text;
+    margin-left: .4rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    .content {
+      .form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    .content {
+      padding: 2rem;
+
+      .form {
+        align-items: center;
+      }
+    }
+  }
+}
